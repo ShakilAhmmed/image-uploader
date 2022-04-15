@@ -1,0 +1,28 @@
+{
+    "name": "shakilahmmed/authentication",
+    "description": "Authentication Module for Image Uploader",
+    "license": "MIT",
+    "homepage": "",
+    "authors": [
+        {
+            "name": "Shakil Ahmmed",
+            "email": "shakilfci461@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ShakilAhmmed\\ImageUploader\\Authentication\\": "src"
+        },
+        "classmap": [
+            "database/seeds"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShakilAhmmed\\ImageUploader\\Authentication\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
