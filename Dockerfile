@@ -23,6 +23,9 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 RUN apt-get install -y nodejs
 
+RUN npm install -g laravel-echo-server
+RUN  apt install redis-server -y
+
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

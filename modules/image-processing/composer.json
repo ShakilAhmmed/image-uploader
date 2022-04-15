@@ -1,0 +1,28 @@
+{
+    "name": "shakilahmmed/image-processing",
+    "description": "Image Processing Module for Image Uploader",
+    "license": "MIT",
+    "homepage": "",
+    "authors": [
+        {
+            "name": "Shakil Ahmmed",
+            "email": "shakilfci461@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ShakilAhmmed\\ImageUploader\\ImageProcessing\\": "src"
+        },
+        "classmap": [
+            "database/seeds"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShakilAhmmed\\ImageUploader\\ImageProcessing\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

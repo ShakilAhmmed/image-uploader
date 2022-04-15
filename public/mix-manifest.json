@@ -1,0 +1,10 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/resource/js/components/login.js": "/js/resource/js/components/login.js",
+    "/js/resource/js/components/register.js": "/js/resource/js/components/register.js",
+    "/js/resource/js/components/layouts/nav.js": "/js/resource/js/components/layouts/nav.js",
+    "/js/resource/js/components/home.js": "/js/resource/js/components/home.js",
+    "/js/resource/js/components/add-image.js": "/js/resource/js/components/add-image.js",
+    "/js/resource/js/components/image-list.js": "/js/resource/js/components/image-list.js",
+    "/css/app.css": "/css/app.css"
+}

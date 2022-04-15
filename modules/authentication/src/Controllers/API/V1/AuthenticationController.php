@@ -14,6 +14,7 @@ use ShakilAhmmed\ImageUploader\Authentication\Requests\LoginFormRequest;
 use ShakilAhmmed\ImageUploader\Authentication\Requests\RegisterFormRequest;
 use Symfony\Component\HttpFoundation\Response;
 
+
 class AuthenticationController extends Controller
 {
     /**
