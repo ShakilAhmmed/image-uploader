@@ -8,7 +8,12 @@ Route::group(['prefix' => '/api/v1/'], function () {
     Route::group(['prefix' => 'auth'], function () {
         Route::post('/login', [AuthenticationController::class, 'login']);
         Route::post('/register', [AuthenticationController::class, 'register']);
-        Route::post('/logout', [AuthenticationController::class, 'logout']);
-        Route::post('/refresh', [AuthenticationController::class, 'logout']);
+
+        // Accessible if authenticated
+        Route::group(['middleware' => 'auth:api'], function () {
+            Route::post('/me', [AuthenticationController::class, 'userInfo']);
+            Route::post('/refresh', [AuthenticationController::class, 'refresh']);
+            Route::post('/logout', [AuthenticationController::class, 'logout']);
+        });
     });
 });

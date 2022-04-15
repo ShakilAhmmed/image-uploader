@@ -82,10 +82,20 @@ class AuthenticationController extends Controller
                     $tokenGenerate->token->expires_at
                 )->toDateTimeString()
             ];
-            return $this->successResponse($response, 'Authorised Access.', Response::HTTP_OK);
+            return $this->successResponse($response, 'Token Refreshed', Response::HTTP_OK);
         } catch (Exception $e) {
             return $this->errorResponse('User does not exist', Response::HTTP_UNPROCESSABLE_ENTITY);
         }
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function userInfo(Request $request): JsonResponse
+    {
+        $user = $request->user();
+        return $this->successResponse($user, 'Authorised Access.', Response::HTTP_OK);
     }
 
 }
