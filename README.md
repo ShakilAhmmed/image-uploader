@@ -6,7 +6,7 @@
    cp .env.example .env
 ```
 
-#### Put Your Nginx Port and phpmyadmin port in .env and set username and password
+#### Put Your Nginx Port and phpmyadmin port in .env and set username and password for database
 
 ```dockerfile
    sudo docker-compose up -d 
@@ -32,3 +32,6 @@
    GET  /api/v1/images [Bearer `token`]
    POST /api/v1/images/download [image_url:required] [Bearer `token`]
 ```
+### Future Work
+ - Write Unit Test With Pest
+ - Generate Api Documentation
