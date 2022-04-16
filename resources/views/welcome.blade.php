@@ -18,8 +18,9 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
     Echo.channel('channel')
-        .listen('imageDownload', (e) => {
-                toastr.success('Image Downloaded', 'Success')
+        .listen('.imageDownload', (e) => {
+            console.log(e);
+                toastr.success(`${e.message}`, 'Success')
             }
         );
 </script>

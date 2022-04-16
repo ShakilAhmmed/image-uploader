@@ -52,7 +52,7 @@ export default {
                 image_url: this.image_url
             })
                 .then((response) => {
-                    this.$toastr.success('Image Downloading', 'Success');
+                    this.$toastr.info('Image Downloading', 'Success');
                     this.image_url = null;
                 })
                 .catch(error => {

@@ -35,7 +35,7 @@ class ServiceProvider extends LaravelProvider
             $reflectionProperty = new \ReflectionProperty($data, 'data');
             $reflectionProperty->setAccessible(true);
             $properties = $reflectionProperty->getValue($data);
-            $message = $properties['image_url'] . "Downloaded Successfully";
+            $message = $properties['image_url'] . " Downloaded Successfully";
             event(new ImageDownloadEvent($message));
         });
     }

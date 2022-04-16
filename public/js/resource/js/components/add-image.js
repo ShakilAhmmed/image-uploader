@@ -66,7 +66,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/api/v1/images/download', {
         image_url: this.image_url
       }).then(function (response) {
-        _this.$toastr.success('Image Downloading', 'Success');
+        _this.$toastr.info('Image Downloading', 'Success');
 
         _this.image_url = null;
       })["catch"](function (error) {
