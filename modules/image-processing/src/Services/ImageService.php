@@ -25,12 +25,12 @@ class ImageService
 
     private function getFilePath(): string
     {
-        return 'images/' . substr($this->uri, strrpos($this->uri, '/') + 1);
+        return '/images/' . substr($this->uri, strrpos($this->uri, '/') + 1);
     }
 
     public function download(): string
     {
-        Storage::put($this->getFilePath(), $this->getContents());
+        file_put_contents(public_path($this->getFilePath()), $this->getContents());
         return $this->getFilePath();
     }
 

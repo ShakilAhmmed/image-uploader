@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    name: "AddImageComponent",
+    name: "AddImage",
     data() {
         return {
             image_url: '',
@@ -48,9 +48,12 @@ export default {
     },
     methods: {
         downloadImage() {
-            axios.post('/api/v1/images/download', this.imageUrl)
+            axios.post('/api/v1/images/download', {
+                image_url: this.image_url
+            })
                 .then((response) => {
-                    console.log(response)
+                    this.$toastr.success('Image Downloading', 'Success');
+                    this.image_url = null;
                 })
                 .catch(error => {
                     console.log(error)

@@ -15,4 +15,9 @@
    npm install
    php artisan key:generate
    php artisan passport:install
+   php artisan websocket:serve
 ```
+
+#### Authentication Source Code in [modules/authentication]
+
+#### Image Processing Source Code in [modules/image-processing]

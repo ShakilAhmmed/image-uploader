@@ -23,13 +23,15 @@ window.axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.g
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo';
+import Echo from "laravel-echo"
 
-// window.Pusher = require('pusher-js');
-
-import Echo from 'laravel-echo'
+window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
-    broadcaster: 'socket.io',
-    host: window.location.hostname + ':6001'
+    broadcaster: 'pusher',
+    key: '430b30f00d457a4eda521b69ea0aa384',
+    wsHost: '127.0.0.1',
+    wsPort: 6001,
+    forceTLS: false,
+    disableStats: true,
 });

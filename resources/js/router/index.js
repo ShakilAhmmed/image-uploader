@@ -4,20 +4,20 @@ import store from '../store'
 
 Vue.use(VueRouter)
 
-const LoginComponent = () => import('../components/LoginComponent.vue' /* webpackChunkName: "resource/js/components/login" */)
-const RegisterComponent = () => import('../components/RegisterComponent.vue' /* webpackChunkName: "resource/js/components/register" */)
+const Login = () => import('../components/Login.vue' /* webpackChunkName: "resource/js/components/login" */)
+const Register = () => import('../components/Register.vue' /* webpackChunkName: "resource/js/components/register" */)
 
 const Nav = () => import('../components/layouts/Nav.vue' /* webpackChunkName: "resource/js/components/layouts/nav" */)
 
 const Home = () => import('../components/Home.vue' /* webpackChunkName: "resource/js/components/home" */)
-const AddImage = () => import('../components/AddImageComponent.vue' /* webpackChunkName: "resource/js/components/add-image" */)
-const ImageListComponent = () => import('../components/ImageListComponent.vue' /* webpackChunkName: "resource/js/components/image-list" */)
+const AddImage = () => import('../components/AddImage.vue' /* webpackChunkName: "resource/js/components/add-image" */)
+const ImageList = () => import('../components/ImageList.vue' /* webpackChunkName: "resource/js/components/image-list" */)
 
 const routes = [
     {
         name: "login",
         path: "/login",
-        component: LoginComponent,
+        component: Login,
         meta: {
             middleware: "guest",
             title: `Login`
@@ -26,7 +26,7 @@ const routes = [
     {
         name: "register",
         path: "/register",
-        component: RegisterComponent,
+        component: Register,
         meta: {
             middleware: "guest",
             title: `Register`
@@ -50,7 +50,7 @@ const routes = [
                     {
                         name: "image-list",
                         path: '/',
-                        component: ImageListComponent,
+                        component: ImageList,
                         meta: {
                             title: `ImageList`
                         }

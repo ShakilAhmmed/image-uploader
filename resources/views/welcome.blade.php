@@ -15,8 +15,14 @@
 <div id="app">
     <router-view></router-view>
 </div>
-<script src="//{{ Request::getHost() }}:6001/socket.io/socket.io.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script>
+    Echo.channel('channel')
+        .listen('imageDownload', (e) => {
+                toastr.success('Image Downloaded', 'Success')
+            }
+        );
+</script>
 </body>
 
 </html>

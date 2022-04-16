@@ -47,11 +47,7 @@ export default {
         }
     },
     mounted() {
-        window.Echo.channel(`imageDownload`)
-            .listen('ImageDownloadEvent', (e) => {
-                    console.log(e);
-                }
-            );
+
     }
 }
 </script>

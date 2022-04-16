@@ -54,7 +54,7 @@
 import {mapActions} from 'vuex'
 
 export default {
-    name: 'RegisterComponent',
+    name: 'Register',
     data() {
         return {
             user: {

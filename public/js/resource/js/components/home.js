@@ -103,11 +103,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }))();
     }
   }),
-  mounted: function mounted() {
-    window.Echo.channel("imageDownload").listen('ImageDownloadEvent', function (e) {
-      console.log(e);
-    });
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),

@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Events;
+namespace ShakilAhmmed\ImageUploader\ImageProcessing\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
-use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -26,6 +24,13 @@ class ImageDownloadEvent implements ShouldBroadcast
         $this->message = $message;
     }
 
+    public function broadcastWith()
+    {
+        return [
+            'message' => $this->message
+        ];
+    }
+
     /**
      * Get the channels the event should broadcast on.
      *
@@ -33,6 +38,11 @@ class ImageDownloadEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('imageDownload');
+        return new Channel('channel');
+    }
+
+    public function broadcastAs(): string
+    {
+        return 'imageDownload';
     }
 }

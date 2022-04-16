@@ -16,16 +16,12 @@ RUN apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql intl mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install sockets pdo_mysql intl mbstring exif pcntl bcmath gd
 
 #Install Node Js and Npm
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 RUN apt-get install -y nodejs
-
-RUN npm install -g laravel-echo-server
-RUN  apt install redis-server -y
-
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

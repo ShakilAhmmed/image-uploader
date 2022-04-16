@@ -39,7 +39,7 @@
 import {mapActions} from 'vuex'
 
 export default {
-    name: "LoginComponent",
+    name: "Login",
     data() {
         return {
             auth: {
@@ -60,7 +60,7 @@ export default {
                     this.signIn(data)
                 })
                 .catch(({response: {data}}) => {
-                    alert(data.message)
+                    console.log(data.message)
                 }).finally(() => {
                 this.processing = false
             })
