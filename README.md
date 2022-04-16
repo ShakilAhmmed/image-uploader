@@ -23,7 +23,7 @@
 
 #### Image Processing Source Code in [modules/image-processing]
 
-###   
+###   Endpoints
 
 ```shell
    POST /api/v1/auth/login [email:required,password:required]
