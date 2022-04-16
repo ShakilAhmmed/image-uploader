@@ -15,6 +15,7 @@
    npm install
    php artisan key:generate
    php artisan passport:install
+   php artisan migrate
    php artisan websocket:serve
 ```
 
