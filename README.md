@@ -21,3 +21,14 @@
 #### Authentication Source Code in [modules/authentication]
 
 #### Image Processing Source Code in [modules/image-processing]
+
+###   
+
+```shell
+   POST /api/v1/auth/login [email:required,password:required]
+   POST /api/v1/auth/register [name:required,email:required,password:required]
+   POST /api/v1/auth/logout [Bearer `token`]
+   POST /api/v1/auth/me [Bearer `token`]
+   GET  /api/v1/images [Bearer `token`]
+   POST /api/v1/images/download [image_url:required] [Bearer `token`]
+```
